@@ -12,7 +12,7 @@
  * Base structure
  */
 body {
-  background: lightgrey;
+  background: #fff;
 }
 .cover-container {
   max-width: 42em;
