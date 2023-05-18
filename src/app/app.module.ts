@@ -4,20 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { FormsModule } from '@angular/forms';
-import { HomePageComponent } from './home/homePage.component';
+import { MainComponent } from './home/main.component';
 import { RouterModule } from '@angular/router';
+import { FooterSectionComponent } from './home/footer.component';
+import { ServicesSectionComponent } from './home/services.component';
+import { AboutSectionComponent } from './home/about.component';
+import { HeaderSectionComponent } from './home/header.component';
+import { ContactSectionComponent } from './home/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    MainComponent,
+    HeaderSectionComponent,
+    AboutSectionComponent,
+    ServicesSectionComponent,
+    ContactSectionComponent,
+    FooterSectionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    // HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent }
+      { path: '', component: MainComponent }
       ], {})
   ],
   providers: [AppService],
