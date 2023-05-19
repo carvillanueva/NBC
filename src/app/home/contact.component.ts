@@ -48,7 +48,7 @@ import { Component } from '@angular/core';
       <br>
       <p class="fs-6 text-muted">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit.</p>
     </h2>
-    <div class="row p-4" style="display: flex;">
+    <div class="row sectionPadding p-4" style="display: flex;">
 
       <div class="col-lg-5" style="display: flex;">
         <div class="infoBox" style="flex: 1;">

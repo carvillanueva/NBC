@@ -15,8 +15,6 @@ import { Component } from '@angular/core';
       margin-left: 50%;
       transform: translateX(-50%);
       top: 50px;
-      font-weight: 300;
-      font-size: 35px;
       line-height: 30px;
     }
     .menu-background {
@@ -126,7 +124,7 @@ import { Component } from '@angular/core';
         <div class="closeBottom"></div>
       </div>
 
-      <div class="companyName">Nora's Cleaning</div>
+      <!-- <div class="companyName">Nora's Cleaning</div> -->
 
       <div class="fs-1 fw-semibold lh-lg menuOptionsClose">
         <div class="menuListClose" (click)="goTo('about')">
@@ -148,10 +146,10 @@ import { Component } from '@angular/core';
         <div class="bottomLine"></div>
       </div>
 
-      <div class="companyName">Nora's Cleaning</div>
+      <!-- <div class="companyName">Nora's Cleaning</div> -->
 
-      <div class="container px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mx-auto">
+      <div class="container h-100 d-flex px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center">
           <div class="col-10 col-sm-8 col-lg-6">
             <img src="../assets/images/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>

@@ -15,6 +15,10 @@ body {
 .form-group {
   padding-bottom: 15px;
 }
+.sectionPadding {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 /*
  * Globals

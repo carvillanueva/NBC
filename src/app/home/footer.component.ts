@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
             />
           </svg>
           <small class="d-block mb-3 text-body-secondary"
-            >&copy; 2017–2023</small
+            >&copy; 2023 - Nora Cleaning</small
           >
         </div>
         <div class="col-6 col-md">
@@ -39,10 +39,6 @@ import { Component } from '@angular/core';
           <ul class="list-unstyled text-small">
             <li><a class="link-secondary" href="#">Cool stuff</a></li>
             <li><a class="link-secondary" href="#">Random feature</a></li>
-            <li><a class="link-secondary" href="#">Team feature</a></li>
-            <li><a class="link-secondary" href="#">Stuff for developers</a></li>
-            <li><a class="link-secondary" href="#">Another one</a></li>
-            <li><a class="link-secondary" href="#">Last time</a></li>
           </ul>
         </div>
         <div class="col-6 col-md">
@@ -50,8 +46,6 @@ import { Component } from '@angular/core';
           <ul class="list-unstyled text-small">
             <li><a class="link-secondary" href="#">Resource name</a></li>
             <li><a class="link-secondary" href="#">Resource</a></li>
-            <li><a class="link-secondary" href="#">Another resource</a></li>
-            <li><a class="link-secondary" href="#">Final resource</a></li>
           </ul>
         </div>
         <div class="col-6 col-md">
@@ -59,8 +53,6 @@ import { Component } from '@angular/core';
           <ul class="list-unstyled text-small">
             <li><a class="link-secondary" href="#">Business</a></li>
             <li><a class="link-secondary" href="#">Education</a></li>
-            <li><a class="link-secondary" href="#">Government</a></li>
-            <li><a class="link-secondary" href="#">Gaming</a></li>
           </ul>
         </div>
         <div class="col-6 col-md">

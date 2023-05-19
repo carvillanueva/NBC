@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   template: `
     <h2 class="pb-2 border-bottom">Our Services</h2>
 
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 p-4">
+    <div class="row sectionPadding row-cols-1 row-cols-md-2 align-items-md-center g-5 p-4">
         <div class="col d-flex flex-column align-items-start gap-2">
             <h3 class="fw-bold">
             We offer a wide variety of services for all needs!
