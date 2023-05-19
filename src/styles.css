@@ -12,6 +12,9 @@ body {
 .contactBtn {
   background:rgb(148, 187, 233);
 }
+.form-group {
+  padding-bottom: 15px;
+}
 
 /*
  * Globals
