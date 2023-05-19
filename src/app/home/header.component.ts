@@ -88,7 +88,33 @@ import { Component } from '@angular/core';
       bottom: 11.11%;
       border: 1px solid black;
     }
-
+    .menuOptionsClose {
+      position: absolute;
+      left: 5%;
+      width: 90%;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 45px;
+      display: block;
+      align-items: center;
+      text-align: center;
+    }
+    .menuListClose:hover {
+      color: #3d5963 !important;
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: #3d5963;
+      text-decoration-thickness: 3px;
+      transition: all .25s ease-in-out;
+    }
+    .menuListClose:not(:hover){
+      text-decoration: none;
+      transition: color .25s ease-in-out;
+    }
+    .menuOptionsClose:hover .menuListClose{
+      color: rgba(27, 56, 63, .35);
+      transition: all .25s ease-in-out;
+    }
 
   `,
   ],
@@ -102,7 +128,7 @@ import { Component } from '@angular/core';
 
       <div class="companyName">Nora's Cleaning</div>
 
-      <div class="menuOptionsClose">
+      <div class="fs-1 fw-semibold lh-lg menuOptionsClose">
         <div class="menuListClose" (click)="goTo('about')">
           About
         </div>
