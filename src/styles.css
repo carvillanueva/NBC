@@ -10,7 +10,7 @@ body {
   background: linear-gradient(25deg, rgba(238, 174, 202, 0.8534007352941176) 13%, rgba(148, 187, 233, 0.8477984943977591) 53%);
 }
 .contactBtn {
-  background:rgba(148, 187, 233, 0.8477984943977591);
+  background:rgb(148, 187, 233);
 }
 
 /*
@@ -22,6 +22,10 @@ body {
 .btn-light:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
+}
+.btn:hover {
+  color: #333;
+  background:rgba(148, 187, 233, 0.8477984943977591);
 }
 /*
  * Base structure

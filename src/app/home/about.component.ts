@@ -33,9 +33,6 @@ import { Component } from '@angular/core';
             <button type="button" class="btn contactBtn text-white btn-lg px-4 me-md-2">
               Primary
             </button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-              Default
-            </button>
           </div>
         </div>
     </div>
