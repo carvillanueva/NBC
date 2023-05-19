@@ -6,6 +6,12 @@ html {
 body {
   margin: 0;
 }
+.headerBackground {
+  background: linear-gradient(25deg, rgba(238, 174, 202, 0.8534007352941176) 13%, rgba(148, 187, 233, 0.8477984943977591) 53%);
+}
+.contactBtn {
+  background:rgba(148, 187, 233, 0.8477984943977591);
+}
 
 /*
  * Globals

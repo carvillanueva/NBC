@@ -19,7 +19,43 @@ import { Component } from '@angular/core';
       font-size: 35px;
       line-height: 30px;
     }
-    .menu {
+    .menu-background {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      z-index: 10;
+    }
+    .menuX {
+      position: absolute;
+      width: 48px;
+      height: 37px;
+      right: 40px;
+      top: 65px;
+      cursor: pointer;
+    }
+    .closeTop{
+      position: absolute;
+      left: 14.64%;
+      right: -14.64%;
+      border: 1px solid black;
+      transform: rotate(-45deg);
+    }
+    .closeMiddle {
+      position: absolute;
+      left: -25%;
+      right: 100%;
+      opacity: 0;
+      border: 1px solid black;
+    }
+    .closeBottom {
+      position: absolute;
+      left: 14.64%;
+      right: -14.64%;
+      border: 1px solid black;
+      transform: rotate(45deg);
+    }
+    .menuLines {
       position: absolute;
       width: 40px;
       height: 30px;
@@ -57,8 +93,30 @@ import { Component } from '@angular/core';
   `,
   ],
   template: `
-    <div class="pageSize headerBackground">
-      <div class="menu">
+    <div class="menu-background" *ngIf="showMenu">
+      <div class="menuX" (click)="showMenu = false">
+        <div class="closeTop"></div>
+        <div class="closeMiddle"></div>
+        <div class="closeBottom"></div>
+      </div>
+
+      <div class="companyName">Nora's Cleaning</div>
+
+      <div class="menuOptionsClose">
+        <div class="menuListClose" (click)="goTo('about')">
+          About
+        </div>
+        <div class="menuListClose" (click)="goTo('service')">
+          Services
+        </div>
+        <div class="menuListClose" (click)="goTo('contact')">
+          Contact
+        </div>
+      </div>
+    </div>
+
+    <div class="pageSize headerBackground" >
+      <div class="menuLines" (click)="showMenu = true">
         <div class="topLine"></div>
         <div class="middleLine"></div>
         <div class="bottomLine"></div>
@@ -66,23 +124,29 @@ import { Component } from '@angular/core';
 
       <div class="companyName">Nora's Cleaning</div>
 
-      <!-- <div class="container px-4 py-5">
+      <div class="container px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mx-auto">
           <div class="col-10 col-sm-8 col-lg-6">
             <img src="../assets/images/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nora's Cleaning service! We offer services for ...</h1>
             <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</button>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
     </div>
   `,
 })
-export class HeaderSectionComponent {}
+export class HeaderSectionComponent {
+  public showMenu: boolean = false;
+
+
+  public goTo(location: string) {
+    console.log(location);
+  }
+}
