@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
         animate(250),
       ]),
       transition(":leave", animate(250, style({ opacity: 0 }))),
-    ]),
+    ])
   ],
   styles: [`
     .pageSize {
@@ -146,6 +146,20 @@ import { Component } from '@angular/core';
     .custom-shape-divider-bottom-1684527032 .shape-fill {
       fill: #FFFFFF;
     }
+    /* @keyframes typingAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .typing-animation {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingAnimation 3s steps(10, end);
+    } */
   `,
   ],
   template: `
@@ -202,6 +216,9 @@ import { Component } from '@angular/core';
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nora's Cleaning service! We offer services for ...</h1>
+            <!-- <p>We offer services for <span [ngClass]="{'typing-animation': showAnimations}">residential homes</span>.</p>
+            <p>We offer services for <span [ngClass]="{'typing-animation': showAnimations}">commercial buildings</span>.</p>
+            <p>We offer services for <span [ngClass]="{'typing-animation': showAnimations}">deep cleans</span>.</p> -->
             <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <a href="#contact"><button type="button" class="btn contactBtn btn-lg px-4 me-md-2">Contact Me!</button></a>
@@ -216,6 +233,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderSectionComponent {
   public showMenu: boolean = false;
+  showAnimations = false;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.showAnimations = true;
+    }, 1000);
+  }
 
   onMenuClick() {
     this.showMenu = false;
