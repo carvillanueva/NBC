@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
             add onto it with another sentence and probably just keep going until
             we run out of words.
             </p>
-            <button class="btn contactBtn text-white btn-lg">Contact us!</button>
+            <a href="#contact"><button class="btn contactBtn text-dark btn-lg">Contact us!</button></a>
         </div>
 
         <div class="col">

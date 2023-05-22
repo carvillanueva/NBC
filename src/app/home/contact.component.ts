@@ -44,11 +44,9 @@ import { Component } from '@angular/core';
   `,
   ],
   template: `
-    <h2 class="pb-2 border-bottom">Contact
-      <br>
-      <p class="fs-6 text-muted">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit.</p>
-    </h2>
-    <div class="row sectionPadding p-4" style="display: flex;">
+      <h2 class="pb-2 border-bottom">Contact</h2>
+      <span class="fs-6 text-muted">Please feel free to contact me!</span>
+      <div class="row sectionPadding p-4" style="display: flex;">
 
       <div class="col-lg-5" style="display: flex;">
         <div class="infoBox" style="flex: 1;">

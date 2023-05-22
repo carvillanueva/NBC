@@ -1,7 +1,22 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'header-section',
+   animations: [
+    trigger("fade", [
+      state("in", style({ opacity: 1 })),
+      transition(":enter", [
+        style({
+          opacity: 0,
+          color: "transparent",
+          textShadow: "white 0 0 15px",
+        }),
+        animate(250),
+      ]),
+      transition(":leave", animate(250, style({ opacity: 0 }))),
+    ]),
+  ],
   styles: [`
     .pageSize {
       height: 100vh;
@@ -135,7 +150,7 @@ import { Component } from '@angular/core';
   `,
   ],
   template: `
-    <div class="menu-background" *ngIf="showMenu">
+    <div class="menu-background" *ngIf="showMenu" [@fade]="'in'">
       <div class="menuX" (click)="showMenu = false">
         <div class="closeTop"></div>
         <div class="closeMiddle"></div>
@@ -145,15 +160,21 @@ import { Component } from '@angular/core';
       <!-- <div class="companyName">Nora's Cleaning</div> -->
 
       <div class="fs-1 fw-semibold lh-lg menuOptionsClose">
-        <div class="menuListClose" (click)="goTo('about')">
-          About
-        </div>
-        <div class="menuListClose" (click)="goTo('service')">
-          Services
-        </div>
-        <div class="menuListClose" (click)="goTo('contact')">
-          Contact
-        </div>
+        <a href="#about" (click)="showMenu = false">
+          <div class="menuListClose">
+            About
+          </div>
+        </a>
+        <a href="#services" (click)="showMenu = false;">
+          <div class="menuListClose">
+            Services
+          </div>
+        </a>
+        <a href="#contact" (click)="showMenu = false">
+          <div class="menuListClose">
+            Contact
+          </div>
+        </a>
       </div>
     </div>
 
@@ -176,7 +197,7 @@ import { Component } from '@angular/core';
       <!-- <div class="companyName">Nora's Cleaning</div> -->
 
       <div class="container h-100 d-flex px-4 py-5" style="position:relative;">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center">
+        <div class="row flex-lg-row-reverse align-items-center py-5 justify-content-center">
           <div class="col-10 col-sm-8 col-lg-6">
             <img src="../assets/images/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
@@ -184,7 +205,7 @@ import { Component } from '@angular/core';
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nora's Cleaning service! We offer services for ...</h1>
             <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</button>
+              <a href="#contact"><button type="button" class="btn contactBtn btn-lg px-4 me-md-2">Contact Me!</button></a>
             </div>
           </div>
         </div>
@@ -196,7 +217,9 @@ import { Component } from '@angular/core';
 export class HeaderSectionComponent {
   public showMenu: boolean = false;
 
-
+  onMenuClick() {
+    this.showMenu = false;
+  }
   public goTo(location: string) {
     console.log(location);
   }
