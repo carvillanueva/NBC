@@ -146,7 +146,6 @@ import { Component } from '@angular/core';
     .custom-shape-divider-bottom-1684527032 .shape-fill {
       fill: #FFFFFF;
     }
-
   `,
   ],
   template: `
@@ -208,6 +207,7 @@ import { Component } from '@angular/core';
               <a href="#contact"><button type="button" class="btn contactBtn btn-lg px-4 me-md-2">Contact Me!</button></a>
             </div>
           </div>
+          <!-- <img src="./assets/images/icon-1.3s-203px.png"> -->
         </div>
       </div>
 

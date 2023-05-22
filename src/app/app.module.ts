@@ -13,10 +13,12 @@ import { ServicesSectionComponent } from './home/services.component';
 import { AboutSectionComponent } from './home/about.component';
 import { HeaderSectionComponent } from './home/header.component';
 import { ContactSectionComponent } from './home/contact.component';
+import { LoadingComponent } from './home/loadingPage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoadingComponent,
     MainComponent,
     HeaderSectionComponent,
     AboutSectionComponent,
