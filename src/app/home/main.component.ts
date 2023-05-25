@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     `,
   ],
   template: `
-    <header-section></header-section>
+    <header-section id="header"></header-section>
     <div class="container">
       <about-section id="about"></about-section>
       <service-section id="service"></service-section>

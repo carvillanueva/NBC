@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     `,
   ],
   template: `
-    <footer class="container py-5">
+    <!-- <footer class="container py-5">
       <div class="row">
         <div class="col-12 col-md">
           <svg
@@ -64,6 +64,18 @@ import { Component } from '@angular/core';
             <li><a class="link-secondary" href="#">Terms</a></li>
           </ul>
         </div>
+      </div>
+    </footer> -->
+    <footer class=" bg-secondary h-100 py-5">
+      <div class="container my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#header" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">&copy; 2023 Housecleaning with Nora, Inc</p>
       </div>
     </footer>
   `,
